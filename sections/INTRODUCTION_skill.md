@@ -51,9 +51,7 @@ A property-comparison table may help when several method families differ along c
 
 ### 3.2 Focus on a small number of important limitations
 
-A useful default is to organize the motivation around **two major limitations** rather than scattering many minor complaints throughout the Introduction. State each limitation clearly and reuse the same concepts consistently in the method overview and contribution statements.
-
-This is a writing heuristic, not a mandatory count. Use one limitation or a different number when that more accurately reflects the paper's evidence and contribution.
+Select the limitations needed to establish the actual research gap. State each clearly and reuse the same concepts in the method overview and contributions; let the evidence determine the count.
 
 For each proposed limitation, check:
 - Is it important to the target task?
@@ -62,6 +60,10 @@ For each proposed limitation, check:
 - Does the proposed method actually address it?
 
 Avoid vague statements such as “existing methods have several limitations” without explaining what they are. Avoid overstating the limitation with absolute wording such as “cannot” when “may fail to” or “does not explicitly address” is more accurate.
+
+For a vague limitation, identify the affected object, the path by which the limitation acts, and its consequence for the target task. Distinguish a limitation of existing approaches from a technical challenge in building the proposed solution. Explain the latter alongside the proposed response: what makes closing the gap difficult, why an available technique cannot be directly applied when evidence supports that claim, and which design addresses the obstacle. Calling a problem challenging does not explain the obstacle.
+
+Check scope words such as many, most, and all against the methods actually reviewed. A different training objective alone does not establish that another method is theoretically invalid or unrelated to the target task.
 
 ### 3.3 Do not confuse a stronger backbone with the research contribution
 
@@ -110,16 +112,11 @@ The Introduction should provide enough context to establish the gap, but should 
 
 Do not spend several paragraphs on background and then introduce the method in one vague sentence. Explain what the method changes relative to the identified limitations and why that design is relevant. Keep formulas and implementation details for Methodology.
 
+State the core change before detailing the pipeline. If modules are described as joint or coupled, name what each supplies to the other, such as a constructed representation and an objective that guides its update. Use sequential language only for actual dependencies.
+
 ## 5. Contribution Statements
 
-A useful default is **three contributions**, but the count must follow the actual work.
-
-A common organization is:
-1. **Problem or methodological contribution:** the framework, formulation, or central idea.
-2. **Technical contribution:** the specific mechanism or analysis that addresses the main limitation(s).
-3. **Empirical or theoretical validation:** the evidence establishing what the paper demonstrates.
-
-When the Introduction is organized around two major limitations, the first two contributions can correspond to those limitations, while the final contribution summarizes the validation. This alignment is a useful default, not a rule to force when the paper's contributions differ.
+Group contributions by the actual advances: a formulation, a mechanism or analysis, or validation where relevant. Give each item a distinct topic, concrete action and object, and necessary significance. State the validation scope for empirical contributions. Avoid repeating a benefit already established in the motivation; do not add items to meet a target count.
 
 For each contribution, verify that it is:
 - concrete rather than a broad claim of being “novel” or “effective”;
@@ -220,3 +217,9 @@ This module consolidates the following guidance from the provided source files:
 - `Longlong_Lin_wechat_advice_notes(6).md`: Advice 8 (strong backbones are not enough for motivation); Advice 9 (use mature paper structures without copying content); Advice 13 (focus writing effort on key arguments); Advice 23 (structure the Introduction around two limitations).
 
 HGSC-specific examples and wording in the source guide are not treated as universal rules. Only the underlying writing principles are generalized here.
+
+The supplied learning summary adds I1–I5 (E71; E48/E55/E73;
+E06/E84; E08/E56/E85; E72/E75): I1 includes a reported direct remark;
+the remaining mechanism and contribution guidance is revision-derived.
+Scope-word and validity checks are general evidence checks, not fixed
+mentor wording preferences. See root §7 for source availability and limits.

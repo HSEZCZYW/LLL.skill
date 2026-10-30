@@ -103,6 +103,11 @@ synthesize their implications rather than reproduce them.
 Preserve a key qualification when omitting it would make the conclusion
 misleading.
 
+If a closing ablation or efficiency sentence repeats an outcome already
+conveyed, merge or remove the duplicate. Keep such evidence when it adds
+a distinct finding central to the paper; the experiment type alone is
+not a reason to exclude it.
+
 ### Step 6: Audit consistency with the Abstract and Introduction
 
 The Conclusion, Abstract, and Introduction should describe the same
@@ -310,3 +315,9 @@ These notes do not prescribe a universal sentence count or a fixed
 Conclusion template. The workflow and checklists in this skill
 operationalize those principles; adapt them to the paper's actual
 contribution, evidence, and venue.
+
+The supplied summary's C1–C2 (E83) reinforce the existing synthesis
+workflow and add conditional duplicate removal, not a fixed paragraph
+order or exclusion of ablations. C3 is a general evidence-boundary check,
+not proof of a stable mentor preference about claim wording or future
+work. See root §7 for source availability and attribution limits.

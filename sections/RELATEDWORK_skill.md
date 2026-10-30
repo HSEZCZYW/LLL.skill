@@ -80,11 +80,9 @@ Choose the criterion that best explains the field and the paper's
 position. Avoid mixing unrelated classification criteria at the same
 level unless the literature genuinely requires it.
 
-The mentor-derived default is **two or three subsections**, with each
-subsection corresponding to a relevant research category. Treat this as
-a preference, not a universal limit: use fewer or more only when the
-paper's scope and literature justify it. Do not create artificial
-categories just to satisfy a fixed count.
+Choose categories and subsection count from the distinctions needed for
+the research question. Explain representative mechanisms within each
+category; do not split or merge categories to meet a numerical target.
 
 ### Step 4: Check literature and baseline coverage
 
@@ -181,6 +179,12 @@ demonstrably true under the stated conditions.
 Do not portray previous methods as weaker than they are, conflate their
 assumptions, or infer a limitation merely because a method does not use
 the proposed paper's design.
+
+Establish what prior work achieves before identifying the specific
+unresolved objective, structural assumption, or supervision condition.
+Use the same evidence-backed gap as the Introduction while leaving its
+full motivation there. Apply the shared consistency audit in root §5
+when comparison dimensions or citation keys change.
 
 ### 4.4 Make citation use meaningful
 
@@ -326,7 +330,7 @@ The main mentor-derived rules for this module are:
 
 -   Keep Related Work focused and classified rather than turning it into
     a broad survey.
--   Prefer two or three paradigm-based subsections when appropriate.
+-   Choose meaningful research categories without a fixed count.
 -   Ensure experimental baselines are covered.
 -   End each category with a concise limitation relevant to the paper.
 -   Keep those limitations aligned with the Introduction's main
@@ -340,3 +344,9 @@ reviewed papers provide examples of task-based and paradigm-based
 organization. Their specific taxonomies and technical claims are
 illustrative only: they must not be copied as universal rules or
 transferred to a new paper without checking relevance and evidence.
+
+The supplied summary's R1–R4 (E80; E72/E80; E80; E33/E46/E75)
+refine taxonomy, mechanism comparison, and gap alignment as conditional
+revision-derived guidance. Table and citation validation are general
+checks maintained in root §5, not evidence of a mentor-specific style.
+See root §7 for source availability and attribution limits.

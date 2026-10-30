@@ -100,6 +100,11 @@ Each subsection should have a clear responsibility. Avoid repeating the
 same explanation in the framework overview, component descriptions,
 objective formulation, and algorithm.
 
+If small headings fragment one mechanism, merge them under a heading
+covering the complete mechanism. Recheck coverage, dependencies, and
+paragraph transitions after merging; retain separate headings when they
+help readers locate distinct functions.
+
 ### Step 4: Write each component from motivation to mechanism
 
 For each major module, use the following reasoning sequence when
@@ -119,6 +124,11 @@ Do not force every component into five separate paragraphs. The sequence
 is a reasoning guide. Keep the prose concise and use formulas where they
 clarify the mechanism.
 
+Lead with the core operation and its object, then identify input sources,
+outputs, and downstream use. For coupled modules, describe the information
+or optimization feedback in each direction instead of relying on words
+such as joint or unified.
+
 ### Step 5: Formalize the method precisely
 
 For each important equation or objective:
@@ -137,6 +147,12 @@ A formula should do real explanatory work. Avoid introducing equations
 that merely restate prose, and do not omit a necessary explanation after
 presenting a complex expression.
 
+For learned structures, distinguish the admissible variable domain,
+candidate support, current nonzero support, and learned weights. Specify
+which remain fixed and which can change. As a general technical check,
+trace discrete selection separately from continuous updates: learning
+weights does not imply that every selection step is differentiable.
+
 ### Step 6: Describe algorithms and training procedures when useful
 
 Use pseudocode or an algorithm environment when the method involves a
@@ -150,6 +166,11 @@ stage.
 
 Do not add an algorithm merely for appearance. Ensure the pseudocode
 agrees with the equations and actual procedure.
+
+Move lengthy implementation detail to a locatable appendix when it
+interrupts the explanation. Keep the training objective, essential update
+logic, constraints, and conditions needed to understand the method in the
+main account; verify the promised detail using root §5.
 
 ### Step 7: Assess theoretical claims and complexity
 
@@ -294,6 +315,10 @@ Do not report the complexity of one component as the complexity of the
 entire method. Distinguish time and space complexity when both are
 relevant.
 
+When several cost terms obscure the result, state the total and its main
+components before deriving each term. A reordered expression must retain
+the same assumptions and cost; it does not establish a stronger bound.
+
 ### 4.7 Use figures to explain, not decorate
 
 The framework figure should communicate the main pipeline and the
@@ -304,6 +329,11 @@ a non-obvious transformation or behavior concrete.
 Avoid duplicating the same information in a figure, algorithm, and
 paragraph without a clear reason. Verify that all figure labels and
 symbols agree with the equations and prose.
+
+In a framework caption, describe each module's function, key output,
+downstream use, and text location where needed, using comparable detail
+across modules. Keep low-level operations in the body. Apply root §5 to
+names and formal-result references when revising the overview or figure.
 
 ### 4.8 Maintain natural academic prose
 
@@ -480,3 +510,10 @@ examples only where their methods are relevant. Their specific graph
 types, objective functions, equations, assumptions, and theoretical
 claims must not be copied into another paper without independent
 verification.
+
+The supplied summary adds M1–M5 (E65; E10/E47/E57/E69; E42/E74;
+E64/E28; E22/E32/E41). M1 and M4 include reported direct remarks;
+module naming, mechanism exposition, and result-first analysis are
+conditional revision inferences. The detailed support/gradient checks
+and appendix-completeness checks are general technical checks, not
+mentor-specific preferences. See root §7 for source limits.

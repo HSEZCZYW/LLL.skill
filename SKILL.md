@@ -37,7 +37,7 @@ This is a **paper-writing skill**, not a general research project manager. Do no
 - Prefer a clear chain of reasoning over generic background or lists of method names.
 - Connect the research problem, limitations of existing work, design choices, experiments, and conclusions.
 - Explain why a design is needed, what alternatives it addresses, and what evidence supports it.
-- Remove repetition and vague claims, but do not delete technically important content merely to shorten the text.
+- Compress repeated arguments and low-value detail before shortening mechanism descriptions. Retain conditions that change meaning, including input sources, sparsity, support restrictions, assumptions, and evaluation scope; after editing, check that readers can still recover the technical object, action, and evidence.
 
 ### 2.4 Avoid overclaiming and formulaic writing
 
@@ -60,14 +60,14 @@ Identify the user's requested task and consult only the relevant section guidanc
 
 | Task | Section guidance |
 |---|---|
-| Introduction, motivation, research gap, contributions | `sections/01-introduction/SKILL.md` |
-| Related work, literature organization, research positioning | `sections/02-related-work/SKILL.md` |
-| Preliminaries, notation, assumptions, problem definition | `sections/03-preliminaries-problem-definition/SKILL.md` |
-| Method design explanation, formulas, theory, algorithms, complexity | `sections/04-methodology/SKILL.md` |
-| Experimental setup, baselines, main results, ablations, sensitivity, robustness, efficiency | `sections/05-experiments/SKILL.md` |
-| Abstract | `sections/06-abstract/SKILL.md` |
-| Conclusion | `sections/07-conclusion/SKILL.md` |
-| Reviewer responses and rebuttal planning | `sections/08-rebuttal/SKILL.md` |
+| Introduction, motivation, research gap, contributions | `sections/INTRODUCTION_skill.md` |
+| Related work, literature organization, research positioning | `sections/RELATEDWORK_skill.md` |
+| Preliminaries, notation, assumptions, problem definition | `sections/PRELIMINARIES_skill.md` |
+| Method design explanation, formulas, theory, algorithms, complexity | `sections/METHODOLOGY_skill.md` |
+| Experimental setup, baselines, main results, ablations, sensitivity, robustness, efficiency | `sections/EXPERIMENTS_skill.md` |
+| Abstract | `sections/ABSTRACT_skill.md` |
+| Conclusion | `sections/CONCLUSION_skill.md` |
+| Reviewer responses and rebuttal planning | `sections/REBUTTAL_skill.md` (currently a placeholder; use shared principles only) |
 
 If a referenced module has not been created or is unavailable, continue using the principles in this entry and the evidence available. Do not pretend to have read a missing module or invent its rules.
 
@@ -141,6 +141,20 @@ Academic papers must read as one coherent argument. When a task affects more tha
 - **Main text ↔ Appendix:** detailed proofs, settings, and supplementary results should agree with the main text.
 - **Paper ↔ Rebuttal:** responses must accurately describe the manuscript changes and evidence actually provided.
 
+When names, definitions, or locations change, inspect the affected overview,
+headings, formulas, captions, labels, bibliography keys, and cross-references
+together. A renamed lemma also needs matching theorem environments and proof
+references. For a changed comparison-table dimension, update its definition,
+header, entries, column format, and discussion. Check that a citation key
+resolves and that its source supports the associated claim; these are separate checks.
+
+Choose main-text versus appendix placement by what readers need to understand
+the argument. Keep essential objectives, constraints, and findings accessible.
+When moving material, verify that the destination contains the complete definition,
+conditions, or details promised by the text; update figures, navigation, and
+references, and inspect conditional compilation so material is not accidentally
+hidden. Moving a definition or proof does not remove the need to validate it.
+
 Do not force changes to other sections when the user requests a narrow edit. Flag cross-section issues when they materially affect correctness.
 
 ## 6. Optional Paper Context
@@ -164,6 +178,17 @@ Mentor-derived writing advice, revision examples, and checklists may be stored i
 - Preserve the conditions and limitations attached to a rule.
 - If a general principle and a paper-specific example appear to conflict, prioritize technical correctness and the current paper's evidence; surface the conflict when necessary.
 - Keep paper-specific content, such as a particular method's equations or terminology, out of global rules unless it genuinely generalizes.
+- Distinguish explicit mentor remarks, inferences from revisions, and general technical checks. Joint authorship alone does not establish who made an edit. Do not attribute a technical check to the mentor without evidence.
+- Merge synonymous rules at their existing location. For conflicting or reversed edits, retain the decision conditions rather than prescribing a word, heading count, paragraph order, or fixed main-text/appendix location. Exclude isolated word substitutions and intermediate errors from style defaults.
+- Keep public skill updates abstract: do not copy unpublished manuscript passages, private comments, or nonpublic experiment details into the repository.
+
+The 2026-10-30 update uses the supplied `LLL_skill_Learning_By_Section.md`
+summary as secondary evidence. Its original E01–E87 evidence cards were not
+available for this update; new revision-derived guidance remains conditional,
+not a demonstrated stable preference across papers. Historical source names in
+section source notes record earlier attribution, not files bundled with this
+repository or sources reverified in this update. Apply their summarized rules
+only within the current evidence and the conditions above.
 
 ## 8. Response Expectations
 

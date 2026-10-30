@@ -76,6 +76,10 @@ for understanding the paper's actual contribution.
 Do not move material into Preliminaries merely because it is
 mathematical.
 
+Place critiques of existing methods in the Introduction or Related Work
+and explanations of the proposed design in Methodology. Keep only the
+shared foundation here, with a brief link to its later use when needed.
+
 ### Step 3: Build a notation inventory
 
 When useful, create an internal inventory of symbols and their meanings.
@@ -129,6 +133,12 @@ Verify that:
     use it.
 -   No equation silently changes the meaning of a previously defined
     symbol.
+
+As general technical checks, inspect subscripts, superscripts, index
+ranges, dimensions, and the exact set denoted by support notation.
+Shorter prose or a removed comment is not evidence of mathematical
+correctness. Compile when the source and tooling are available, while
+checking meaning separately from successful compilation.
 
 Do not change a formula merely to make notation look more conventional.
 If a formula appears inconsistent, explain the issue and request
@@ -236,6 +246,12 @@ audience requires clarification.
 
 When a formal definition is followed by a method, briefly clarify how
 the definition will be used if that relationship is not self-evident.
+
+For a non-obvious operator, connect its symbols and formula to the object
+it produces and its later use. Briefly explain relevance to the research
+question where needed, without importing the full motivation. If a
+definition or derivation moves to the appendix, use root §5 to verify both
+locations and retain the conditions required by the main argument.
 
 ## 5. Problem Definition and Methodology Placement
 
@@ -373,3 +389,9 @@ The five reviewed papers may provide additional examples of
 formalization, but their domain-specific definitions, graph structures,
 objectives, and symbols must not be transferred to another paper without
 checking relevance and correctness.
+
+The supplied summary's P1–P4 (E30/E81; E87; E66; E67/E68/E87)
+support conditional guidance on placement and explanatory definitions.
+P1 includes a reported direct remark; P3 is a revision inference.
+Mathematical and compilation validation under P4 are general checks,
+not inferred stylistic preferences. See root §7 for source limits.

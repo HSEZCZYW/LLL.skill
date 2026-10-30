@@ -1,4 +1,7 @@
 ---
+name: abstract-writing
+description: Draft, revise, shorten, or audit an academic abstract against the manuscript's actual problem, mechanism, evidence, and venue constraints.
+---
 
 # Abstract Writing Skill
 
@@ -129,6 +132,8 @@ A useful test for each candidate sentence is:
 
 If the answer is unclear, reconsider whether the sentence deserves space in the abstract.
 
+Compress around the central problem–design–evidence thread rather than shortening every detail equally. Preserve why the key limitation requires the design; combine repeated descriptions of the same process or result. Apply the compression check in root §2.3 before removing mechanism conditions.
+
 ### Step 3: Construct the argument
 
 A flexible default progression is:
@@ -154,6 +159,8 @@ When describing a proposed method:
 - Introduce the method name when it helps identify the contribution.
 
 - Explain what the key mechanism does and why it is relevant.
+
+- State its core action and object, then the input source when needed. A shared description can replace a list of low-level operations only if readers can still distinguish the mechanism and recover its essential constraints.
 
 - Describe the relationship between major components when that relationship is important.
 
@@ -195,6 +202,8 @@ When reporting numerical improvements:
 
 Use broad statements such as "improves performance" only when the underlying evidence supports them. Prefer a more specific statement when a verified result materially strengthens the abstract.
 
+Retain enough evaluation scope to interpret the claim, such as dataset and baseline coverage where material. Choose among win counts, ranks, or other summaries by relevance; do not pack every statistic and secondary experiment into the result sentence. Use the comparison definitions in Experiments §4.4 when reporting counts or gains.
+
 ### Step 6: Draft and refine the prose
 
 Write concise, natural academic English.
@@ -233,13 +242,7 @@ The following guidance should be applied conditionally rather than as rigid styl
 
 If the surrounding context already establishes a property, remove a repeated modifier when it contributes no additional technical meaning.
 
-Before:  
-"During neural training, the model ..."
-
-Potential revision:  
-"During training, the model ..."
-
-This edit is appropriate only when the neural nature of the training is already clear and the shorter expression does not change the intended meaning.
+Check whether removing the modifier leaves the same technical scope in context. Keep it when it distinguishes a training regime, input source, or mechanism. A single substitution does not establish a preferred or prohibited word.
 
 ### 5.2 Mark genuine procedural dependencies
 
@@ -368,3 +371,9 @@ Keep this module focused on abstract-specific decisions and workflows.
 - Avoid duplicating global writing principles already maintained in the root `SKILL.md`.
 
 - When new mentor revision histories become available, compare the original and revised text, identify the actual changes, distinguish observed changes from inferred intentions, and update the guidance only when justified.
+
+The supplied summary's A1–A3 (E82; E02/E06/E82; E82) refine
+compression, core actions, and evidence selection as conditional revision
+inferences. A4 (E01/E05) supports the existing caution about surface
+patterns, not a rule for one word or method-name formatting. See root §7
+for source availability and attribution limits.

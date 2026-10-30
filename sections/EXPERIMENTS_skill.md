@@ -152,7 +152,9 @@ do not use rank as a substitute for inspecting the underlying results.
 Each ablation should test a specific design choice or claim. For each
 ablation:
 
--   State what component or choice is removed, replaced, or changed.
+-   Define Full and every variant by the exact operation, module, or loss
+    removed, replaced, or changed; disabling a loss does not necessarily
+    remove the structure or module it supervises.
 -   Clarify what hypothesis the experiment tests.
 -   Report the observed difference.
 -   Interpret the result without treating correlation as definitive
@@ -162,6 +164,14 @@ ablation:
 Prefer controlled comparisons in which the intended component is the
 principal change. If several settings change simultaneously, acknowledge
 that the result cannot isolate the contribution of one component.
+
+State whether architecture, structure construction, data protocol,
+hyperparameters, and tuning budget are held fixed or retuned. For a
+mechanism diagnostic, identify other active terms that could explain the
+effect and any controls used to separate them. If Full loses on a metric
+or an auxiliary term helps only some metrics, retain that exception and
+narrow the claim. Main-table superiority alone cannot attribute a gain
+to an individual module.
 
 Do not automatically conclude that every component is necessary or
 complementary. Those conclusions must follow from the observed evidence
@@ -263,11 +273,10 @@ Include enough datasets, metrics, and baselines to make the evaluation
 credible for the task and venue. Relevant recent methods should not be
 omitted merely because they are inconvenient to reproduce.
 
-Mentor guidance gives six or more datasets and eight or more baselines
-as useful targets for many graph-clustering submissions. Treat these as
-context-dependent heuristics, not universal requirements. The correct
-scope depends on the research problem, available benchmarks, paper type,
-and evaluation conventions.
+Choose coverage according to the research problem, relevant benchmarks,
+paper type, and evaluation conventions. A historical dataset or baseline
+count is not a target for an unrelated paper. For selected representative
+baselines, explain the category or criterion they represent.
 
 Do not write "comprehensive comparison" or "extensive experiments"
 unless the actual coverage supports that description.
@@ -301,6 +310,14 @@ Do not claim that the method wins on every dataset or metric unless the
 table confirms it. Distinguish best individual scores, aggregate rank,
 consistency, and statistical evidence. An overall rank does not erase
 meaningful weaknesses on particular datasets.
+
+For each count, name the comparator, metric, dataset scope, and denominator.
+Wins over one baseline, first places among all compared methods, and
+average ranks answer different questions. Do not substitute one for
+another or report only favorable dataset–metric pairs. For a score on
+a 0–1 scale, an increase from 0.72 to 0.75 is 3 percentage points on a
+percentage scale, or about 4.17% relative improvement; label the quantity
+actually computed. This is a general quantitative check.
 
 ### 4.5 Use metrics that match the task
 
@@ -359,6 +376,13 @@ Use "stable within the tested range" rather than broad claims of
 parameter insensitivity. Do not extrapolate beyond the settings actually
 evaluated.
 
+Separate the fixed configuration used for reported results, the search
+space used to select parameters, and the scan actually used for sensitivity
+analysis. Describe only parameters actually scanned as sensitivity tests;
+other fixed values may be documented in a locatable appendix. For a
+multiplier axis, define the 1x reference and the values each multiplier
+represents.
+
 ### 4.9 Define robustness conditions explicitly
 
 Report the source, type, and intensity of the perturbation, along with
@@ -384,6 +408,11 @@ Do not invent seeds, confidence intervals, p-values, or significance
 results. If the evidence is insufficient, use descriptive language and
 identify what additional analysis would be needed.
 
+A run-count claim in a caption must also be checked against the available
+records; a caption alone cannot verify that independent runs occurred.
+Do not select favorable random runs after seeing their results. Report
+the actual selection and aggregation protocol and its limitations.
+
 ### 4.11 Keep tables and figures readable and consistent
 
 Use consistent precision, metric names, dataset names, method names, and
@@ -393,6 +422,13 @@ Make each table or figure serve a clear purpose. Avoid repeating the
 same results in several forms unless the different presentation reveals
 a distinct pattern. Check that claims in the prose match the values and
 the highlighted entries.
+
+Check the measured quantity and units for time and memory, the aggregation
+scope for ranks, and best/second-best markers. Check source asset paths,
+subfigure labels, settings, and color/point/line meanings against the
+actual plot, especially after reusing a figure layout. A sensitivity plot
+must not retain an ablation caption. Use root §5 for main-text/appendix
+moves; placement depends on the experiment's role, not a fixed rule.
 
 ### 4.12 Connect evidence to the paper's claims without overclaiming
 
@@ -557,9 +593,8 @@ The primary mentor-derived guidance for this module comes from
     combinations of main results, ablations, sensitivity, robustness,
     scalability, visualization, and structural analysis.
 
-The suggestion that six or more datasets and eight or more baselines can
-be useful for many graph-clustering submissions is a mentor-provided
-heuristic, not a universal threshold.
+Historical numerical coverage suggestions are not promoted to targets;
+the operational rule is relevant, transparently justified coverage.
 
 `Longlong_Lin_style_HGSC_Codex_Guide(6).md` provides domain-specific
 examples for organizing experiment subsections and analyzing main
@@ -572,3 +607,12 @@ The five reviewed papers may be used to study experimental organization
 and evidence presentation. Their datasets, baselines, numbers,
 conclusions, and task-specific protocols must not be copied into a new
 paper without independent verification.
+
+The supplied summary's E-A–E-G (E36/E78; E35/E77; E35/E77/E78;
+E76/E70; E59/E79; E17/E20/E25/E39/E51/E58; E40/E50/E53/E54)
+refine comparisons, controls, parameter reporting, and figure checks.
+E-D includes a reported direct remark about parameters actually analyzed.
+Other revision inferences remain conditional; quantitative conversions,
+causal limits, run verification, and honest random-run reporting are
+general technical/evidence checks, not mentor-specific preferences.
+See root §7 for source availability and attribution limits.
