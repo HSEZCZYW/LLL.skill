@@ -88,11 +88,16 @@ Ask a clarification question only when missing information materially blocks the
 
 ### Step 2: Inspect relevant material
 
+For substantive drafting, rewriting, structural review, or cross-section
+checks, discover and read the current paper's context using §6 before
+applying section guidance. For a local wording edit, consult context only
+when terminology, technical meaning, or claim scope depends on it.
+
 Use the material available in the conversation or project:
 - the current draft or selected passage;
 - nearby sections needed to preserve context;
 - relevant tables, figures, equations, references, or experiment records;
-- the optional paper-writing context file, if the researcher provides one.
+- relevant facts and constraints from the selected paper context, when available.
 
 Do not require the researcher to repeat information already available. Do not assume access to a repository, Overleaf project, file, or external system unless it is actually available.
 
@@ -159,14 +164,57 @@ Do not force changes to other sections when the user requests a narrow edit. Fla
 
 ## 6. Optional Paper Context
 
-A researcher may provide a `paper_writing_context_template.md` file or equivalent project-specific notes.
+Keep the reusable `paper_writing_context_template.md` in this skill.
+Store a filled copy as `paper_writing_context.md` in the individual paper
+project, or use equivalent notes at a location specified by the researcher.
+Real project information belongs with that paper, not in the shared skill.
 
-- Treat it as supplementary context, not a prerequisite for using LLL.skill.
-- Use only the information relevant to the current task.
-- Distinguish confirmed facts from tentative ideas and preferences.
-- If the context conflicts with the manuscript or verified evidence, identify the conflict instead of silently choosing one.
-- An empty field means unknown; do not fill it with an invented decision.
-- Do not require the researcher to maintain a lengthy project profile for routine writing tasks.
+### Discover and select
+
+- Use a context file explicitly designated for the current paper first.
+  Otherwise, check the established paper-project root for
+  `paper_writing_context.md`, then a filled `paper_writing_context_template.md`
+  for compatibility. Do not treat the skill installation directory as the
+  paper root or search unrelated directories for context.
+- If multiple filled files could apply, use the stated paper identity and
+  location to resolve the choice. If it remains ambiguous, ask which to use;
+  do not combine facts across papers or assume one file is newer by name.
+- Count only actual project-specific field values as information. Blank
+  fields, bracketed prompts, and example values remain unknown. Skip an
+  empty template; missing context does not require creating or filling one.
+  If a designated file is inaccessible, state that limitation rather than
+  implying it was read. Continue any work that does not depend on it.
+- Resolve relative evidence paths from the context file's directory unless
+  it specifies another base. A path is a locator, not proof of a claim.
+
+### Apply to the current task
+
+Use relevant entries to guide concrete decisions: task and scope constrain
+problem framing; limitations and positioning guide the Introduction and
+Related Work; mechanisms, constraints, and terminology constrain method
+descriptions; confirmed findings and exceptions bound empirical claims in
+Experiments, Abstract, and Conclusion; venue and editing limits guide the
+deliverable. Do not merely read the file without applying these constraints.
+
+Distinguish confirmed facts, tentative ideas, plans, and unknowns. A finding
+labeled confirmed still requires the relevant evidence for verification;
+do not report a context assertion as independently checked. Plans cannot
+support completed-result claims. The current user request determines the
+editing task; a saved task field may be stale. Neither overrides technical
+facts or permits unsupported claims.
+
+If context, manuscript, or records conflict, identify the specific statements
+and their sources. Do not silently choose one or rewrite the research
+decision. Ask only when the conflict or missing information blocks the
+current task; otherwise preserve the uncertainty and proceed where possible.
+
+### Keep context current
+
+Update the selected project context when the user requests it, using only
+confirmed decisions or findings and preserving their evidence and limits.
+When a writing task reveals a stale entry, briefly flag it and suggest the
+specific update; do not silently edit the context. Routine sentence edits
+do not require context maintenance or a lengthy project profile.
 
 ## 7. Use of Mentor-Derived Guidance and Examples
 

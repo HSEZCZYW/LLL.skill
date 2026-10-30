@@ -23,13 +23,13 @@ Detailed literature synthesis belongs primarily to Related Work. Formal method d
 
 ## 2. Required Inputs and Context Inspection
 
-Before a substantial rewrite, inspect the available materials in this order:
+Before a substantial rewrite, select and read relevant paper context using
+the root `SKILL.md` §6. Then inspect the available materials:
 
 1. The current Introduction or the user's stated research idea.
 2. The Methodology or method summary, to understand what the paper actually proposes.
 3. The main experimental findings, if available, to ensure the motivation and contribution claims are supported.
 4. Related Work and the relevant cited papers, when available, to check how existing methods are characterized.
-5. The optional `paper_writing_context_template.md`, if provided.
 
 Do not ask the researcher to repeat information already present in the manuscript or conversation. Do not assume access to files, repositories, Overleaf, or external literature unless they are actually available.
 
